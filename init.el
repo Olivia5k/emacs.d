@@ -17,10 +17,9 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-; Extras
+; Theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-; Theme
 (load-theme 'ujelly t)
 
 ; UI
@@ -61,8 +60,6 @@
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
-
-
 ; Highlight current line
 (global-hl-line-mode +1)
 
@@ -92,3 +89,6 @@
 ; Org-mode
 (setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
 	  org-enforce-todo-dependencies t)
+
+; Enlightment
+(info)
