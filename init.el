@@ -8,9 +8,17 @@
 
 (package-refresh-contents)
 
-(defvar my-packages '(evil
+(defvar my-packages '(paredit
+                      rainbow-delimiters
+                      popup
+                      evil
                       evil-leader
+                      evil-paredit
+                      nrepl
+                      auto-complete
+                      ac-nrepl
                       magit
+                      haskell-mode
                       nyan-mode))
 
 (dolist (p my-packages)
@@ -86,9 +94,31 @@
 (evil-mode t)
 (global-evil-leader-mode t)
 
+; Auto complete
+
+(require 'auto-complete-config)
+(ac-config-default)
+
+; Clojure
+
+;; syntax
+(global-rainbow-delimiters-mode)
+
+;; edit
+(add-hook 'clojure-mode-hook 'evil-paredit-mode)
+
+;; nrepl
+(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
+(setq nrepl-popup-stacktraces nil)
+(add-to-list 'same-window-buffer-names "*nrepl*")
+(add-hook 'nrepl-mode-hook 'evil-paredit-mode)
+
+;; ac-nrepl
+(require 'ac-nrepl)
+(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'nrepl-mode))
+
 ; Org-mode
 (setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
 	  org-enforce-todo-dependencies t)
-
-; Enlightment
-(info)
