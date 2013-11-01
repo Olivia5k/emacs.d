@@ -1,29 +1,11 @@
 ; Packages
-(require 'package)
+; Packages
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
 
-(package-initialize)
+; Aliases
 
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/"))
-
-(package-refresh-contents)
-
-(defvar my-packages '(paredit
-                      rainbow-delimiters
-                      popup
-                      evil
-                      evil-leader
-                      evil-paredit
-                      nrepl
-                      auto-complete
-                      ac-nrepl
-                      magit
-                      haskell-mode
-                      nyan-mode))
-
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ; Theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -31,6 +13,7 @@
 (load-theme 'ujelly t)
 
 ; UI
+
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -38,8 +21,7 @@
 
 (blink-cursor-mode -1)
 
-; Settings
-(defalias 'yes-or-no-p 'y-or-n-p)
+
 
 (setenv "PAGER" "/usr/bin/cat")
 
@@ -59,6 +41,7 @@
 
 ; Line and column numbers in margin
 (linum-mode)
+
 ; Line, column and file size in minibuffer
 (line-number-mode t)
 (column-number-mode t)
@@ -70,11 +53,6 @@
 
 ; Highlight current line
 (global-hl-line-mode +1)
-
-; Highlight matching parentheses
-(require 'paren)
-(setq show-paren-style 'parenthesis)
-(show-paren-mode 1)
 
 ; Evil
 (setq evil-leader/leader "SPC")
@@ -91,34 +69,19 @@
   "q" 'kill-buffer-and-window
   "l" 'linum-mode)
 
-(evil-mode t)
+;(evil-mode t)
 (global-evil-leader-mode t)
+(global-set-key "\C-c e" 'evil-mode)
 
-; Auto complete
+; Lisps
 
-(require 'auto-complete-config)
-(ac-config-default)
-
-; Clojure
-
-;; syntax
 (global-rainbow-delimiters-mode)
 
-;; edit
-(add-hook 'clojure-mode-hook 'evil-paredit-mode)
+(require 'paren)
+(setq show-paren-style 'parenthesis)
 
-;; nrepl
-(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
-(setq nrepl-popup-stacktraces nil)
-(add-to-list 'same-window-buffer-names "*nrepl*")
-(add-hook 'nrepl-mode-hook 'evil-paredit-mode)
-
-;; ac-nrepl
-(require 'ac-nrepl)
-(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'nrepl-mode))
-
+(show-paren-mode 1)
 ; Org-mode
 (setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
 	  org-enforce-todo-dependencies t)
+
