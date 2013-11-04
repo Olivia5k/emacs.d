@@ -1,5 +1,4 @@
 ; Packages
-; Packages
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
@@ -81,7 +80,19 @@
 (setq show-paren-style 'parenthesis)
 
 (show-paren-mode 1)
-; Org-mode
-(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
-	  org-enforce-todo-dependencies t)
 
+; Org-mode
+(require 'org-install)
+
+(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
+      org-enforce-todo-dependencies t
+      org-src-fontify-natively t
+      org-confirm-babel-evaluate nil)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (emacs-lisp . t)
+   (python . t)
+   (sh . t) 
+  ))
