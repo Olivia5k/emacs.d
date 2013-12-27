@@ -2,8 +2,10 @@
 (source "melpa" "http://melpa.milkbox.net/packages/")
 
 (depends-on "cask")
-(depends-on "magit")
+(depends-on "cyberpunk-theme")
 (depends-on "evil")
 (depends-on "evil-leader")
+(depends-on "magit")
 (depends-on "nyan-mode")
 (depends-on "rainbow-delimiters")
+(depends-on "ujelly-theme")

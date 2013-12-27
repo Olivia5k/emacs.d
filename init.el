@@ -11,6 +11,10 @@
 
 (load-theme 'ujelly t)
 
+; Buffers
+
+(setq global-auto-revert-mode t)
+
 ; UI
 
 (menu-bar-mode -1)
@@ -19,8 +23,6 @@
 (nyan-mode)
 
 (blink-cursor-mode -1)
-
-
 
 (setenv "PAGER" "/usr/bin/cat")
 
