@@ -2,6 +2,8 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
+(setq global-auto-complete-mode t)
+
 ; Aliases
 
 (defalias 'yes-or-no-p 'y-or-n-p)
