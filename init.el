@@ -76,6 +76,10 @@
 (global-evil-leader-mode t)
 (global-set-key "\C-c e" 'evil-mode)
 
+; Dired
+
+(add-hook 'dired-load-hook (function (lambda () (load "dired-x")))
+
 ; Lisps
 
 (global-rainbow-delimiters-mode)
