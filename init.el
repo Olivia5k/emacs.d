@@ -1,6 +1,7 @@
 ; Packages
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
+(require 'pallet)
 
 (setq global-auto-complete-mode t)
 
@@ -9,8 +10,6 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ; Theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-
 (load-theme 'ujelly t)
 
 ; Buffers
@@ -53,9 +52,6 @@
 ; Increase/Decrease font size
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
-
-; Highlight current line
-(global-hl-line-mode +1)
 
 ; Evil
 (setq evil-leader/leader "SPC")
