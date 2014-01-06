@@ -14,7 +14,7 @@
 
 ; Buffers
 
-(setq global-auto-revert-mode t)
+(global-auto-revert-mode t)
 
 ; UI
 
@@ -85,13 +85,16 @@
 
 (show-paren-mode 1)
 
-; Org-mode
-(require 'org-install)
+; Cider
 
-(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
-      org-enforce-todo-dependencies t
-      org-src-fontify-natively t
-      org-confirm-babel-evaluate nil)
+(require 'cider)
+(setq nrepl-hide-special-buffers t
+      cider-repl-pop-to-buffer-on-connect nil
+      cider-popup-stacktraces nil
+      cider-repl-popup-stacktraces t)
+
+; Org-mode
+(require 'org)
 
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -99,4 +102,15 @@
    (emacs-lisp . t)
    (python . t)
    (sh . t) 
+   (clojure . t)
   ))
+
+(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
+      org-enforce-todo-dependencies t
+      org-src-fontify-natively t
+      org-confirm-babel-evaluate nil)
+
+; Clojure in Org
+(require 'ob-clojure)
+(setq org-babel-clojure-backend 'cider)
+
