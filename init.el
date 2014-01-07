@@ -70,7 +70,7 @@
 
 ;(evil-mode t)
 (global-evil-leader-mode t)
-(global-set-key "\C-c e" 'evil-mode)
+(global-set-key (kbd "C-c e") 'evil-mode)
 
 ; Dired
 
