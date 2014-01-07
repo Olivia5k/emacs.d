@@ -20,6 +20,7 @@
 (depends-on "git-commit-mode")
 (depends-on "git-rebase-mode")
 (depends-on "goto-last-change")
+(depends-on "haskell-mode")
 (depends-on "helm")
 (depends-on "ipython")
 (depends-on "magit")

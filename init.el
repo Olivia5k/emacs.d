@@ -103,6 +103,7 @@
    (python . t)
    (sh . t) 
    (clojure . t)
+   (haskell . t)
   ))
 
 (setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
