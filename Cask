@@ -1,5 +1,6 @@
 (source marmalade)
 (source melpa)
+(source org)
 
 (depends-on "ac-nrepl")
 (depends-on "auto-complete")
@@ -23,6 +24,7 @@
 (depends-on "ipython")
 (depends-on "magit")
 (depends-on "nyan-mode")
+(depends-on "org")
 (depends-on "pallet")
 (depends-on "pkg-info")
 (depends-on "popup")
