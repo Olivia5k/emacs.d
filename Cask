@@ -26,6 +26,7 @@
 (depends-on "pallet")
 (depends-on "pkg-info")
 (depends-on "popup")
+(depends-on "pretty-mode")
 (depends-on "python-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "s")

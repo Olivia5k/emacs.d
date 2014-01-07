@@ -114,3 +114,5 @@
 (require 'ob-clojure)
 (setq org-babel-clojure-backend 'cider)
 
+(require 'pretty-mode)
+(global-pretty-mode 1)
