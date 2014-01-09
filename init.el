@@ -22,7 +22,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (nyan-mode)
-
+(set-face-attribute 'default nil :height 150)
 (blink-cursor-mode -1)
 
 (setenv "PAGER" "/usr/bin/cat")
