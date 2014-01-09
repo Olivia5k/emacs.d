@@ -27,9 +27,6 @@
 
 (setenv "PAGER" "/usr/bin/cat")
 
-; Better file and buffer search
-(ido-mode 1)
-
 (setq inhibit-startup-screen t
       initial-scratch-message nil
       make-backup-files nil
@@ -118,3 +115,11 @@
 ; Pretty mode
 (require 'pretty-mode)
 (global-pretty-mode 1)
+
+
+; Ido
+(require 'ido-ubiquitous)
+(require 'ido-vertical-mode)
+(ido-mode)
+(ido-vertical-mode)
+

@@ -22,6 +22,8 @@
 (depends-on "goto-last-change")
 (depends-on "haskell-mode")
 (depends-on "helm")
+(depends-on "ido-ubiquitous")
+(depends-on "ido-vertical-mode")
 (depends-on "ipython")
 (depends-on "magit")
 (depends-on "nyan-mode")
