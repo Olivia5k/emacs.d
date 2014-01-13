@@ -27,6 +27,7 @@
 (depends-on "ido-vertical-mode")
 (depends-on "ipython")
 (depends-on "magit")
+(depends-on "multi-term")
 (depends-on "nyan-mode")
 (depends-on "org")
 (depends-on "pallet")
