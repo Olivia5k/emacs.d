@@ -3,23 +3,22 @@
 (cask-initialize)
 (require 'pallet)
 
+; Autocompletion
+(require 'auto-complete)
 (setq global-auto-complete-mode t)
 (require 'w3m)
 (setq browse-url-browser-function 'w3m)
 
 ; Aliases
-
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ; Theme
 (load-theme 'ujelly t)
 
 ; Buffers
-
 (global-auto-revert-mode t)
 
 ; UI
-
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -69,6 +68,7 @@
                                    (smex-major-mode-commands)))
 
 ; Evil
+(require 'evil)
 (setq evil-leader/leader "SPC")
 (setq-default evil-shift-with 4)
 
@@ -95,11 +95,11 @@
 
 (setq inferior-lisp-program "clisp")
 
-(global-rainbow-delimiters-mode)
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode t)
 
 (require 'paren)
 (setq show-paren-style 'parenthesis)
-
 (show-paren-mode 1)
 
 (if (file-exists-p "~/.emacs.d/HyperSpec")
@@ -115,7 +115,6 @@
 
 ; Org-mode
 (require 'org)
-
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(
@@ -137,12 +136,14 @@
 
 ; Pretty mode
 (require 'pretty-mode)
-(global-pretty-mode 1)
+(global-pretty-mode t)
 
 
 ; Ido
+(require 'ido)
 (require 'ido-ubiquitous)
 (require 'ido-vertical-mode)
-(ido-mode)
-(ido-vertical-mode)
+(ido-mode t)
+(ido-everywhere t)
+(ido-vertical-mode t)
 
