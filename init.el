@@ -4,6 +4,8 @@
 (require 'pallet)
 
 (setq global-auto-complete-mode t)
+(require 'w3m)
+(setq browse-url-browser-function 'w3m)
 
 ; Aliases
 
@@ -83,6 +85,9 @@
 (setq show-paren-style 'parenthesis)
 
 (show-paren-mode 1)
+
+(if (file-exists-p "~/.emacs.d/HyperSpec")
+  (setq common-lisp-hyperspec-root "file://~/.emacs.d/HyperSpec/"))
 
 ; Cider
 
