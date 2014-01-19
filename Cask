@@ -37,6 +37,7 @@
 (depends-on "python-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "s")
+(depends-on "smex")
 (depends-on "soft-stone-theme")
 (depends-on "ujelly-theme")
 (depends-on "undo-tree")
