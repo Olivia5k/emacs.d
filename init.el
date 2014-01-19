@@ -75,6 +75,8 @@
 
 ; Lisps
 
+(setq inferior-lisp-program "clisp")
+
 (global-rainbow-delimiters-mode)
 
 (require 'paren)
