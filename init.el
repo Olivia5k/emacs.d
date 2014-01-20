@@ -5,7 +5,8 @@
 
 ; Autocompletion
 (require 'auto-complete)
-(setq global-auto-complete-mode t)
+(global-auto-complete-mode)
+
 (require 'w3m)
 (setq browse-url-browser-function 'w3m)
 
