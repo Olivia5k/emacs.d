@@ -1,150 +1,17 @@
-; Packages
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
-(require 'pallet)
+(setq dotemacs-dir
+  (file-name-directory (or (buffer-file-name) load-file-name)))
+(add-to-list 'load-path dotemacs-dir)
 
-; Autocompletion
-(require 'auto-complete)
-(global-auto-complete-mode)
+(require 'packages)
+(require 'appearance)
+(require 'autocompletion)
+(require 'editor)
+(require 'enhancements)
+(require 'customizations)
+(require 'hooks)
 
-(require 'w3m)
-(setq browse-url-browser-function 'w3m)
+(require 'custom-org)
 
-; Aliases
-(defalias 'yes-or-no-p 'y-or-n-p)
-
-; Theme
-(load-theme 'ujelly t)
-
-; Buffers
-(global-auto-revert-mode t)
-
-; UI
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(nyan-mode)
-(set-face-attribute 'default nil :height 110)
-(blink-cursor-mode -1)
-
-(setenv "PAGER" "/usr/bin/cat")
-
-(setq inhibit-startup-screen t
-      initial-scratch-message nil
-      make-backup-files nil
-      user-full-name "Alejandro Gómez"
-      user-email-address "alejandro@dialelo.com"
-      query-user-email-address nil
-      tab-width 4
-      fill-column 80
-      vc-follow-symlinks t
-      ispell-program-name "aspell")
-
-; Line and column numbers in margin
-(linum-mode)
-
-; Line, column and file size in minibuffer
-(line-number-mode t)
-(column-number-mode t)
-(size-indication-mode t)
-
-; Increase/Decrease font size
-(global-set-key (kbd "C-+") 'text-scale-increase)
-(global-set-key (kbd "C--") 'text-scale-decrease)
-
-; Better M-x
-(require 'smex)
-(global-set-key [(meta x)] (lambda ()
-                             (interactive)
-                             (or (boundp 'smex-cache)
-                                 (smex-initialize))
-                             (global-set-key [(meta x)] 'smex)
-                             (smex)))
-
-(global-set-key [(shift meta x)] (lambda ()
-                                   (interactive)
-                                   (or (boundp 'smex-cache)
-                                       (smex-initialize))
-                                   (global-set-key [(shift meta x)] 'smex-major-mode-commands)
-                                   (smex-major-mode-commands)))
-
-; Evil
-(require 'evil)
-(setq evil-leader/leader "SPC")
-(setq-default evil-shift-with 4)
-
-(evil-leader/set-key
-  "w" 'save-buffer
-  "b" 'ido-switch-buffer
-  "B" 'ido-switch-buffer-other-window
-  "n" 'dired
-  "f" 'ido-find-file
-  "g" 'magit-status
-  "k" 'kill-this-buffer
-  "q" 'kill-buffer-and-window
-  "l" 'linum-mode)
-
-;(evil-mode t)
-(global-evil-leader-mode t)
-(global-set-key (kbd "C-c e") 'evil-mode)
-
-; Dired
-
-(add-hook 'dired-load-hook (function (lambda () (load "dired-x"))))
-
-; Lisps
-
-(setq inferior-lisp-program "clisp")
-
-(require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode t)
-
-(require 'paren)
-(setq show-paren-style 'parenthesis)
-(show-paren-mode 1)
-
-(if (file-exists-p "~/.emacs.d/HyperSpec")
-  (setq common-lisp-hyperspec-root "file://~/.emacs.d/HyperSpec/"))
-
-; Cider
-
-(require 'cider)
-(setq nrepl-hide-special-buffers t
-      cider-repl-pop-to-buffer-on-connect nil
-      cider-popup-stacktraces nil
-      cider-repl-popup-stacktraces t)
-
-; Org-mode
-(require 'org)
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '(
-   (emacs-lisp . t)
-   (python . t)
-   (sh . t) 
-   (clojure . t)
-   (haskell . t)
-  ))
-
-(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "WAITING(w)"))
-      org-enforce-todo-dependencies t
-      org-src-fontify-natively t
-      org-confirm-babel-evaluate nil)
-
-; Clojure in Org
-(require 'ob-clojure)
-(setq org-babel-clojure-backend 'cider)
-
-; Pretty mode
-(require 'pretty-mode)
-(global-pretty-mode t)
-
-
-; Ido
-(require 'ido)
-(require 'ido-ubiquitous)
-(require 'ido-vertical-mode)
-(ido-mode t)
-(ido-everywhere t)
-(ido-vertical-mode t)
-
+(require 'lisps)
+(require 'clojure)
+(require 'clisp)
