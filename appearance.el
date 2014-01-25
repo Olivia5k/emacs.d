@@ -6,6 +6,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+; Cursor
 (blink-cursor-mode -1)
 
 ; Font

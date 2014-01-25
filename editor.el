@@ -2,12 +2,12 @@
 (global-auto-revert-mode t)
 
 ; Line and column numbers in margin
-(linum-mode)
+(global-linum-mode)
 
 ; Line, column and file size in minibuffer
-(line-number-mode t)
-(column-number-mode t)
-(size-indication-mode t)
+;(line-number-mode nil)
+;(column-number-mode nil)
+;(size-indication-mode nil)
 
 ; Evil
 (require 'evil)
