@@ -1,8 +1,8 @@
 ; Read changes from disk automatically 
 (global-auto-revert-mode t)
 
-; Line and column numbers in margin
-(global-linum-mode)
+; Line and column numbers in margin when programming
+(add-hook 'prog-mode-hook (lambda () (linum-mode t)))
 
 ; Line, column and file size in minibuffer
 ;(line-number-mode nil)
