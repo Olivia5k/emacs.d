@@ -29,9 +29,13 @@
 (global-evil-leader-mode t)
 (global-set-key (kbd "C-c e") 'evil-mode)
 
+; C-w for deleting a word backwards
+(global-set-key (kbd "C-w") 'evil-delete-backward-word)
+
 ; Increase/Decrease font size
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
+
 
 
 (provide 'editor)
