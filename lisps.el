@@ -1,5 +1,6 @@
 (require 'paren)
 (require 'rainbow-delimiters)
+(require 'paredit)
 
 (defvar mode-hooks '(clojure-mode-hook
 		     emacs-lisp-mode-hook
