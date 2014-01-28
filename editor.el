@@ -1,5 +1,7 @@
 ; Read changes from disk automatically 
 (global-auto-revert-mode t)
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose t)
 
 ; Line and column numbers in margin when programming
 (add-hook 'prog-mode-hook (lambda () (linum-mode t)))
@@ -8,6 +10,9 @@
 ;(line-number-mode nil)
 ;(column-number-mode nil)
 ;(size-indication-mode nil)
+
+; Override regions when writing text
+(delete-selection-mode)
 
 ; Evil
 (require 'evil)
@@ -35,7 +40,6 @@
 ; Increase/Decrease font size
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
-
 
 
 (provide 'editor)

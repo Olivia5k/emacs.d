@@ -5,12 +5,16 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(fringe-mode '(4 . 0))
 
 ; Cursor
 (blink-cursor-mode -1)
 
 ; Line
 (global-hl-line-mode)
+
+; Quick feedback of pressed keys
+(setq echo-keystrokes 0.2)
 
 ; Font
 (set-face-attribute 'default nil :height 110)
