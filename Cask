@@ -42,6 +42,7 @@
 (depends-on "slime")
 (depends-on "smex")
 (depends-on "soft-stone-theme")
+(depends-on "sr-speedbar")
 (depends-on "ujelly-theme")
 (depends-on "undo-tree")
 (depends-on "w3m")

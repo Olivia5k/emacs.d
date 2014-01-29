@@ -31,4 +31,22 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward)
 
+; Speedbar
+(eval-after-load 'sr-speedbar
+  '(progn
+     (setq speedbar-show-unknown-files t
+           speedbar-smart-directory-expand-flag t
+           speedbar-directory-button-trim-method 'trim
+           speedbar-indentation-width 2
+           speedbar-user-imenu-flat t
+           speedbar-use-images nil
+           sr-speedbar-width 40
+           sr-speedbar-width-x 40
+           sr-speedbar-auto-refresh nil
+           sr-speedbar-skip-other-window-p t
+           sr-speedbar-right-side nil)))
+
+(global-set-key (kbd "C-c C-t") 'sr-speedbar-toggle)
+
+
 (provide 'enhancements)
