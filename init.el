@@ -15,3 +15,5 @@
 (require 'lisps)
 (require 'clojure)
 (require 'clisp)
+
+(require 'social)
