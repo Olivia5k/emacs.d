@@ -11,8 +11,12 @@
 ;(column-number-mode nil)
 ;(size-indication-mode nil)
 
+
 ; Override regions when writing text
 (delete-selection-mode)
+
+; Show empty lines
+(toggle-indicate-empty-lines)
 
 ; Evil
 (require 'evil)
