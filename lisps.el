@@ -4,6 +4,7 @@
 
 (defvar mode-hooks '(clojure-mode-hook
 		     emacs-lisp-mode-hook
+		     scheme-mode-hook
 		     lisp-mode-hook))
 
 (dolist (mode-hook mode-hooks)
