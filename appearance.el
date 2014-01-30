@@ -1,11 +1,11 @@
-; Theme
-(load-theme 'cyberpunk t)
-
 ; Unclutter UI
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (fringe-mode '(4 . 0))
+
+; Theme
+(load-theme 'leuven t)
 
 ; Cursor
 (blink-cursor-mode -1)
