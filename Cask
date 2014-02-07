@@ -30,6 +30,7 @@
 (depends-on "jabber")
 (depends-on "jsx-mode")
 (depends-on "leuven-theme")
+(depends-on "load-theme-buffer-local")
 (depends-on "magit")
 (depends-on "multi-term")
 (depends-on "multiple-cursors")

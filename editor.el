@@ -46,4 +46,9 @@
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
 
+;; Whitespace
+(set-default 'indent-tabs-mode nil)
+;(global-whitespace-mode)
+(setq whitespace-style '(face trailing tabs))
+
 (provide 'editor)

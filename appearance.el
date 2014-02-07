@@ -5,7 +5,7 @@
 (fringe-mode '(4 . 0))
 
 ; Theme
-(load-theme 'leuven t)
+(load-theme 'noctilux t)
 
 ; Cursor
 (blink-cursor-mode -1)
@@ -13,11 +13,15 @@
 ; Line
 (global-hl-line-mode)
 
+; Inline images
+(require 'iimage)
+(iimage-mode)
+
 ; Quick feedback of pressed keys
 (setq echo-keystrokes 0.2)
 
 ; Font
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 130)
 
 ; Nyan progress bar
 (require 'nyan-mode)
