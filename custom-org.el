@@ -21,7 +21,7 @@
 
 (require 'load-theme-buffer-local)
 (add-hook 'org-mode-hook (lambda ()
-			   (load-theme-buffer-local 'leuven (current-buffer))))
+			   (load-theme-buffer-local 'leuven (current-buffer) t)))
 
 ;; HTML Export
 (setq org-html-html5-fancy t)
