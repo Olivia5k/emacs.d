@@ -9,7 +9,7 @@
    (haskell . t)
   ))
 
-(setq org-todo-keywords '((sequence "TODO(t)" "WAIT(w)" "|" "DONE(d)" "MAYBE(m)"))
+(setq org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "WAIT(w)" "|" "DONE(d)" "MAYBE(m)"))
       org-enforce-todo-dependencies t
       org-src-fontify-natively t
       org-confirm-babel-evaluate nil
