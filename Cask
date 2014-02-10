@@ -27,6 +27,7 @@
 (depends-on "ido-ubiquitous")
 (depends-on "ido-vertical-mode")
 (depends-on "ipython")
+(depends-on "irfc")
 (depends-on "jabber")
 (depends-on "jsx-mode")
 (depends-on "leuven-theme")
