@@ -25,7 +25,7 @@
 
 ;; Notes
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-(global-set-key "C-c c" 'org-capture)
+(global-set-key (kbd "C-c c") 'org-capture)
 
 ;; HTML Export
 (setq org-html-html5-fancy t)
