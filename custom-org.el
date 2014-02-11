@@ -9,19 +9,23 @@
    (haskell . t)
   ))
 
+;; Customizations
 (setq org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "WAIT(w)" "|" "DONE(d)" "MAYBE(m)"))
       org-enforce-todo-dependencies t
       org-src-fontify-natively t
       org-confirm-babel-evaluate nil
       org-return-follows-link t)
 
-;; Prettify source code 
-(setq org-src-fontify-natively t)
-(setq org-export-async-debug nil)
-
+;; Aesthetics 
 (require 'load-theme-buffer-local)
 (add-hook 'org-mode-hook (lambda ()
 			   (load-theme-buffer-local 'leuven (current-buffer) t)))
+
+(setq org-src-fontify-natively t)
+
+;; Notes
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(global-set-key "C-c c" 'org-capture)
 
 ;; HTML Export
 (setq org-html-html5-fancy t)
@@ -38,9 +42,5 @@
         (underline      . "<span class=\"underline\">%s</span>")
         (verbatim       . "<code>%s</code>")))
 
-
-;; Capture
-(setq org-default-notes-file (concat org-directory "/notes.org"))
-(global-set-key (kbd "C-c c") 'org-capture)
 
 (provide 'custom-org)
