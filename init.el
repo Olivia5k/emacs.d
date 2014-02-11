@@ -16,5 +16,6 @@
 (require 'clojure)
 (require 'clisp)
 (require 'python)
+(require 'html)
 
 (require 'social)
