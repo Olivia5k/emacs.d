@@ -39,4 +39,8 @@
         (verbatim       . "<code>%s</code>")))
 
 
+;; Capture
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(global-set-key (kbd "C-c c") 'org-capture)
+
 (provide 'custom-org)
