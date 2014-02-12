@@ -1,4 +1,4 @@
-; Read changes from disk automatically 
+; Read changes from disk automatically
 (global-auto-revert-mode t)
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose t)
@@ -50,5 +50,6 @@
 (set-default 'indent-tabs-mode nil)
 ;(global-whitespace-mode)
 (setq whitespace-style '(face trailing tabs))
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (provide 'editor)
