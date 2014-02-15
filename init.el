@@ -6,6 +6,7 @@
 (require 'appearance)
 (require 'autocompletion)
 (require 'editor)
+(require 'shell)
 (require 'enhancements)
 (require 'customizations)
 (require 'hooks)
