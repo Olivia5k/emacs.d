@@ -5,17 +5,13 @@
 (fringe-mode '(4 . 0))
 
 ;; Theme
-(load-theme 'noctilux t)
+(load-theme 'leuven t)
 
 ;; Cursor
 (blink-cursor-mode -1)
 
 ;; Line
 (global-hl-line-mode)
-
-;; Inline images
-(require 'iimage)
-(iimage-mode)
 
 ;; Quick feedback of pressed keys
 (setq echo-keystrokes 0.2)
