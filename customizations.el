@@ -14,7 +14,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (require 'w3m)
-(setq browse-url-browser-function 'w3m)
+(setq browse-url-browser-function 'w3m-goto-url-new-session)
 
 
 (provide 'customizations)

@@ -7,6 +7,7 @@
 (require 'autocompletion)
 (require 'editor)
 (require 'shell)
+(require 'mail)
 (require 'enhancements)
 (require 'customizations)
 (require 'hooks)
