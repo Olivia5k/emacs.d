@@ -16,5 +16,18 @@
 (require 'w3m)
 (setq browse-url-browser-function 'w3m-goto-url-new-session)
 
+(defun browse-subreddit (subreddit)
+  (browse-url (string "https://reddit.com/r/" subreddit)))
+
+(defun reddit-clj ()
+  (interactive)
+  (browse-subreddit "clojure"))
+
+(defun reddit-emacs ()
+  (interactive)
+  (browse-subreddit "emacs"))
+
+(require 'ag)
+(setq ag-reuse-buffers 't)
 
 (provide 'customizations)

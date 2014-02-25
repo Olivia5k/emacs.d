@@ -4,6 +4,7 @@
 
 (depends-on "4clojure")
 (depends-on "ac-nrepl")
+(depends-on "ag")
 (depends-on "auto-complete")
 (depends-on "cask")
 (depends-on "cider")
