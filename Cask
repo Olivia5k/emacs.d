@@ -15,6 +15,7 @@
 (depends-on "coffee-mode")
 (depends-on "cyberpunk-theme")
 (depends-on "dash")
+(depends-on "elpy")
 (depends-on "epl")
 (depends-on "evil")
 (depends-on "evil-leader")

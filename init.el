@@ -17,7 +17,7 @@
 (require 'lisps)
 (require 'clojure)
 (require 'clisp)
-(require 'python)
+(require 'python-dev)
 (require 'html)
 
 (require 'social)
