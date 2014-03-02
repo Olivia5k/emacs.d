@@ -1,9 +1,4 @@
-(setq inhibit-startup-screen t
-      initial-scratch-message nil
-      make-backup-files nil
-      user-full-name "Alejandro Gómez"
-      user-email-address "alejandro@dialelo.com"
-      query-user-email-address nil
+(setq make-backup-files nil
       tab-width 4
       fill-column 80
       vc-follow-symlinks t

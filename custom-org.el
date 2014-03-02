@@ -17,10 +17,6 @@
       org-return-follows-link t)
 
 ;; Aesthetics 
-(require 'load-theme-buffer-local)
-(add-hook 'org-mode-hook (lambda ()
-			   (load-theme-buffer-local 'leuven (current-buffer) t)))
-
 (setq org-src-fontify-natively t)
 
 ;; Notes
