@@ -25,4 +25,7 @@
 (require 'ag)
 (setq ag-reuse-buffers 't)
 
+(require 'smex)
+(global-set-key (kbd "C-t") 'smex)
+
 (provide 'customizations)
