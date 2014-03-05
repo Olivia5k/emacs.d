@@ -40,6 +40,7 @@
     (abbrev-mode . "")
     (undo-tree-mode " ⎌")
     ;; Major modes
+    (help-mode . "？")
     (fundamental-mode . "∅")
     (lisp-interaction-mode . "λ")
     (python-mode . "py")
