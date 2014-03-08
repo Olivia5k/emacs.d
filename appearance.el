@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/themes/")
+
 ;; Unclutter UI
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -5,7 +7,8 @@
 (fringe-mode '(4 . 0))
 
 ;; Theme
-(load-theme 'leuven t)
+(require 'assemblage-theme)
+(load-theme 'assemblage t)
 
 ;; Cursor
 (blink-cursor-mode -1)
