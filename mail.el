@@ -3,6 +3,7 @@
 
 ;; TODO: filters: kaleidos, gr14, gr14-team
 ;; TODO: notifications
+;; TODO: automatic pgp message decryption
 
 ;; Customizations
 (setq mu4e-confirm-quit nil)
@@ -32,7 +33,11 @@
 
 ;; Folder shortcuts
 (setq mu4e-maildir-shortcuts
-      '(("/INBOX" . ?i)))
+  '(("/INBOX" . ?i)
+    ("/Kaleidos" . ?k)
+    ("/GR14" . ?g)
+    ("/Clojure" . ?c)
+    ("/Meetups" . ?m)))
 
 ;; Mail retrieval
 (setq
@@ -56,9 +61,10 @@
 (defconst *mu4e-compose-signature-personal* "Alejandro")
 
 (defconst *mail-work* "alejandro.gomez@kaleidos.net")
+(defconst *mail-work-regex* "@kaleidos\.net")
 (defconst *mu4e-compose-signature-work*
   (concat  "Alejandro Gómez\n"
-           "Engineer\n"
+           "Developer\n"
            "alejandro.gomez@kaleidos.net | Tel.: (+34) 91 356 29 95 \n"
            "http://kaleidos.net/B6DA55"))
 
@@ -68,12 +74,11 @@
     (let ((msg mu4e-compose-parent-message))
       (when msg
        (cond
-        ((or  (mu4e-message-contact-field-matches msg :to *mail-work*)
-             (mu4e-message-contact-field-matches msg :cc *mail-work*))
+        ((or  (mu4e-message-contact-field-matches msg :to *mail-work-regex*)
+             (mu4e-message-contact-field-matches msg :cc *mail-work-regex*))
           (setq user-mail-address *mail-work*
                 mu4e-compose-signature *mu4e-compose-signature-work*))
-        ((or (mu4e-message-contact-field-matches msg :to *mail-personal*)
-            (mu4e-message-contact-field-matches msg :cc *mail-personal*))
+        (:else 
           (setq user-mail-address *mail-personal*
                 mu4e-compose-signature *mu4e-compose-signature-personal*)))))))
 
