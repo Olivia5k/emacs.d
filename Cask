@@ -32,6 +32,7 @@
 (depends-on "irfc")
 (depends-on "jabber")
 (depends-on "jsx-mode")
+(depends-on "know-your-http-well")
 (depends-on "leuven-theme")
 (depends-on "load-theme-buffer-local")
 (depends-on "magit")
