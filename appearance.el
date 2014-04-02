@@ -7,8 +7,7 @@
 (fringe-mode '(4 . 0))
 
 ;; Theme
-(require 'assemblage-theme)
-(load-theme 'assemblage t)
+(load-theme 'leuven t)
 
 ;; Cursor
 (blink-cursor-mode -1)
