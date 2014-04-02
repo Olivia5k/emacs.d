@@ -4,6 +4,7 @@
 ;; TODO: filters: kaleidos, gr14, gr14-team
 ;; TODO: notifications
 ;; TODO: automatic pgp message decryption
+;; TODO: Quoting dates format
 
 ;; Customizations
 (setq mu4e-confirm-quit nil)
