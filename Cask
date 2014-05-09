@@ -28,6 +28,7 @@
 (depends-on "helm-spotify")
 (depends-on "ido-ubiquitous")
 (depends-on "ido-vertical-mode")
+(depends-on "info+")
 (depends-on "ipython")
 (depends-on "irfc")
 (depends-on "jabber")
