@@ -7,7 +7,7 @@
 (fringe-mode '(4 . 0))
 
 ;; Theme
-(load-theme 'leuven t)
+(load-theme 'cyberpunk t)
 
 ;; Cursor
 (blink-cursor-mode -1)
@@ -61,7 +61,7 @@
                ;; major mode
              (when (eq mode major-mode)
                (setq mode-name mode-str)))))
- 
+
 (add-hook 'after-change-major-mode-hook 'clean-mode-line)
 
 (provide 'appearance)
