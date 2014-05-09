@@ -8,6 +8,8 @@
 (require 'js2-mode)
 (require 'coffee-mode)
 
+(setq coffee-tab-width 4)
+
 (define-key js2-mode-map (kbd "C-c C-b") 'js-add-breakpoint)
 (define-key coffee-mode-map (kbd "C-c C-b") 'js-add-breakpoint)
 
