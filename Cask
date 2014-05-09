@@ -20,6 +20,7 @@
 (depends-on "evil")
 (depends-on "evil-leader")
 (depends-on "f")
+(depends-on "flycheck")
 (depends-on "git-commit-mode")
 (depends-on "git-rebase-mode")
 (depends-on "goto-last-change")
