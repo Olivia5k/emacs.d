@@ -4,19 +4,23 @@
  '(
    (emacs-lisp . t)
    (python . t)
-   (sh . t) 
+   (sh . t)
    (clojure . t)
    (haskell . t)
+   (ruby . t)
   ))
 
+;; TODO keywords
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "INPROGRESS(i)" "WAIT(w)" "|" "DONE(d)" "MAYBE(m)")))
+
 ;; Customizations
-(setq org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "WAIT(w)" "|" "DONE(d)" "MAYBE(m)"))
-      org-enforce-todo-dependencies t
+(setq org-enforce-todo-dependencies t
       org-src-fontify-natively t
       org-confirm-babel-evaluate nil
       org-return-follows-link t)
 
-;; Aesthetics 
+;; Aesthetics
 (setq org-src-fontify-natively t)
 
 ;; Notes
