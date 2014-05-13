@@ -6,8 +6,9 @@
   (highlight-lines-matching-regexp "^[ ]*debugger"))
 
 (require 'js2-mode)
-(require 'coffee-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
+(require 'coffee-mode)
 (setq coffee-tab-width 4)
 
 (define-key js2-mode-map (kbd "C-c C-b") 'js-add-breakpoint)
