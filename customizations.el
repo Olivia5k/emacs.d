@@ -29,4 +29,19 @@
 (require 'smex)
 (global-set-key (kbd "C-t") 'smex)
 
+; Resize windows
+(global-set-key (kbd "C-x M-h") (lambda ()
+                                  (interactive)
+                                  (enlarge-window-horizontally 10)))
+(global-set-key (kbd "C-x M-l") (lambda ()
+                                  (interactive)
+                                  (enlarge-window-horizontally -10)))
+(global-set-key (kbd "C-x M-j") (lambda ()
+                                  (interactive)
+                                  (enlarge-window 10)))
+(global-set-key (kbd "C-x M-k") (lambda ()
+                                  (interactive)
+                                  (enlarge-window -10)))
+
+
 (provide 'customizations)
