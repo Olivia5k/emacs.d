@@ -1,6 +1,7 @@
 (defun js-add-breakpoint ()
   "Add a break point"
   (interactive)
+  (move-end-of-line nil)
   (newline-and-indent)
   (insert "debugger")
   (highlight-lines-matching-regexp "^[ ]*debugger"))
