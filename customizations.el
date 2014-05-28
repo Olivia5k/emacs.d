@@ -13,7 +13,7 @@
       w3m-default-display-inline-images t)
 
 (defun browse-subreddit (subreddit)
-  (browse-url (string "https://reddit.com/r/" subreddit)))
+  (browse-url (concat "https://reddit.com/r/" subreddit)))
 
 (defun reddit-clj ()
   (interactive)
