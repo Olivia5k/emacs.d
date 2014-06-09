@@ -6,12 +6,6 @@
 ; Line and column numbers in margin when programming
 (add-hook 'prog-mode-hook (lambda () (linum-mode t)))
 
-; Line, column and file size in minibuffer
-;(line-number-mode nil)
-;(column-number-mode nil)
-;(size-indication-mode nil)
-
-
 ; Override regions when writing text
 (delete-selection-mode)
 
@@ -34,7 +28,6 @@
   "q" 'kill-buffer-and-window
   "l" 'linum-mode)
 
-;(evil-mode t)
 (global-evil-leader-mode t)
 (global-set-key (kbd "C-c e") 'evil-mode)
 
@@ -45,11 +38,11 @@
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
-
 ;; Whitespace
 (set-default 'indent-tabs-mode nil)
-;(global-whitespace-mode)
+(global-whitespace-mode)
 (setq whitespace-style '(face trailing tabs))
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 
 (provide 'editor)

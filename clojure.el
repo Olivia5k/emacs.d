@@ -21,8 +21,12 @@
     (insert form)
     (cider-repl-return)))
 
-(add-hook 'clojure-mode-hook
-	  (lambda () (local-set-key (kbd "C-`") 'cider-eval-expression-at-point-in-repl)))
+(define-key cider-mode-map (kbd "C-`") 'cider-eval-expression-at-point-in-repl)
+
+
+(require 'elein)
+(require 'clojure-mode)
+(define-key clojure-mode-map (kbd "C-x t") 'elein-test)
 
 ; Cider mode hooks
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)

@@ -16,11 +16,13 @@
 
 ; Ido
 (require 'ido)
-(require 'ido-ubiquitous)
-(require 'ido-vertical-mode)
 (ido-mode)
 (ido-everywhere)
+
+(require 'ido-ubiquitous)
 (ido-ubiquitous-mode)
+
+(require 'ido-vertical-mode)
 (ido-vertical-mode)
 ;(ido-at-point-mode)
 
