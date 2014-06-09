@@ -79,7 +79,7 @@
              (mu4e-message-contact-field-matches msg :cc *mail-work-regex*))
           (setq user-mail-address *mail-work*
                 mu4e-compose-signature *mu4e-compose-signature-work*))
-        (:else 
+        (:else
           (setq user-mail-address *mail-personal*
                 mu4e-compose-signature *mu4e-compose-signature-personal*)))))))
 
@@ -97,7 +97,7 @@
   message-kill-buffer-on-exit t)
 
 ;; HTML mails
-(add-to-list 'mu4e-view-actions 
+(add-to-list 'mu4e-view-actions
   '("browse mail" . mu4e-action-view-in-browser) t)
 
 (provide 'mail)

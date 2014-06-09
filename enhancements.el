@@ -50,5 +50,18 @@
 
 (global-set-key (kbd "C-c C-t") 'sr-speedbar-toggle)
 
+;; Pop-up windows
+
+(require 'popwin)
+(popwin-mode 1)
+
+;; Projects
+(require 'projectile)
+(projectile-global-mode)
+
+;; Warnings
+(require 'warnings)
+(setq warning-suppress-types '(undo discard-info))
+
 
 (provide 'enhancements)

@@ -11,7 +11,9 @@
   (add-hook mode-hook (lambda ()
 			(rainbow-delimiters-mode)
 			(paredit-mode)
+                        (electric-pair-mode t)
 			(show-paren-mode)
 			(setq show-paren-style 'expression))))
+
 
 (provide 'lisps)
