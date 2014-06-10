@@ -3,9 +3,6 @@
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose t)
 
-; Line and column numbers in margin when programming
-(add-hook 'prog-mode-hook (lambda () (linum-mode t)))
-
 ; Override regions when writing text
 (delete-selection-mode)
 
