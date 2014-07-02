@@ -7,7 +7,7 @@
 (fringe-mode '(4 . 0))
 
 ;; Theme
-(load-theme 'cyberpunk t)
+(load-theme 'noctilux t)
 
 ;; Cursor
 (blink-cursor-mode -1)
