@@ -20,5 +20,6 @@
 (require 'python-dev)
 (require 'js)
 (require 'html)
+(require 'documentation)
 
 (require 'social)
