@@ -19,7 +19,7 @@
 (setq echo-keystrokes 0.2)
 
 ;; Font
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 110 :font "Fantasque Sans Mono")
 
 ;; Useful indicators
 (setq display-time-24hr-format t
