@@ -32,8 +32,8 @@
 (nyan-mode)
 
 ;; Pretty mode
-(require 'pretty-mode)
-(global-pretty-mode t)
+;(require 'pretty-mode)
+;(global-pretty-mode nil)
 
 ;; http://www.masteringemacs.org/articles/2012/09/10/hiding-replacing-modeline-strings/
 (defvar mode-line-cleaner-alist
