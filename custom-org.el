@@ -23,8 +23,8 @@
 ;; Aesthetics
 (setq org-src-fontify-natively t)
 
-;; Notes
-(setq org-default-notes-file (concat org-directory "/notes.org"))
+;; Inbox
+(setq org-default-notes-file (concat org-directory "/inbox.org"))
 (global-set-key (kbd "C-c c") 'org-capture)
 
 ;; HTML Export
@@ -41,6 +41,10 @@
         (strike-through . "<span style=\"strike\">%s</span>")
         (underline      . "<span class=\"underline\">%s</span>")
         (verbatim       . "<code>%s</code>")))
+
+;; Hooks
+(add-hook 'org-mode-hook (lambda ()
+                           (set-fill-column 120)))
 
 
 (provide 'custom-org)
