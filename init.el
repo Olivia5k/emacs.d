@@ -11,9 +11,7 @@
 (require 'enhancements)
 (require 'customizations)
 (require 'hooks)
-
 (require 'custom-org)
-
 (require 'lisps)
 (require 'clojure)
 (require 'clisp)
@@ -21,5 +19,6 @@
 (require 'js)
 (require 'html)
 (require 'documentation)
-
 (require 'social)
+
+(require 'start)
