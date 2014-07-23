@@ -8,12 +8,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(require 'w3m)
-(setq browse-url-browser-function 'w3m-goto-url-new-session
-      w3m-default-display-inline-images t)
+(require 'eww)
 
 (defun browse-subreddit (subreddit)
-  (browse-url (concat "https://reddit.com/r/" subreddit)))
+  (eww-browse-url (concat "https://reddit.com/r/" subreddit)))
 
 (defun reddit-clj ()
   (interactive)
