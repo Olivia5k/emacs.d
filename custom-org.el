@@ -46,5 +46,10 @@
 (add-hook 'org-mode-hook (lambda ()
                            (set-fill-column 120)))
 
+;; Functions
+(defun pomodoro ()
+  (interactive)
+  (org-timer-set-timer 25))
+
 
 (provide 'custom-org)
