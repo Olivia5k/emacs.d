@@ -1,7 +1,6 @@
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
 (require 'mu4e)
 
-;; TODO: filters: kaleidos, gr14, gr14-team
 ;; TODO: notifications
 ;; TODO: automatic pgp message decryption
 ;; TODO: Quoting dates format

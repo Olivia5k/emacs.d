@@ -22,6 +22,10 @@
 ;; Font
 (set-face-attribute 'default nil :height 110 :font "Fantasque Sans Mono")
 
+;; Fallback font for Unicode glyphs
+(set-fontset-font t nil
+                  (font-spec :name "Symbola"))
+
 ;; Useful indicators
 (setq display-time-24hr-format t
       display-time-mail-file "/home/dialelo/.mail/fastmail/INBOX")
