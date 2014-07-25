@@ -7,7 +7,7 @@
 (setq nrepl-hide-special-buffers t
       cider-repl-pop-to-buffer-on-connect nil
       cider-popup-stacktraces nil
-      cider-repl-popup-stacktraces t)
+      cider-repl-popup-stacktraces nil)
 
 ; Clojure mode hooks
 (defun cider-eval-expression-at-point-in-repl ()
@@ -41,8 +41,17 @@
                (ANY 2)
                (context 2))
              (define-clojure-indent
-               ;; built-ins
                (mlet 1))))
+
+; Autocompletion
+(require 'ac-nrepl)
+(add-hook 'cider-mode-hook 'ac-nrepl-setup)
+(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
+(add-to-list 'ac-modes 'cider-mode)
+(add-to-list 'ac-modes 'cider-repl-mode)
+
+(eval-after-load "cider"
+  '(define-key cider-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc))
 
 ; Cider mode hooks
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
