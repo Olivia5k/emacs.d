@@ -8,6 +8,7 @@
    (clojure . t)
    (haskell . t)
    (ruby . t)
+   (js . t)
   ))
 
 ;; TODO keywords
