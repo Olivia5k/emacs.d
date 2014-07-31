@@ -17,6 +17,7 @@
 (require 'clisp)
 (require 'python-dev)
 (require 'js)
+(require 'pgsql)
 (require 'html)
 (require 'documentation)
 (require 'social)

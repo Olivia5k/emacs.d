@@ -48,9 +48,10 @@
                            (set-fill-column 120)))
 
 ;; Functions
+(defvar pomodoro-duration 20)
 (defun pomodoro ()
   (interactive)
-  (org-timer-set-timer 25))
+  (org-timer-set-timer pomodoro-duration))
 
 
 (provide 'custom-org)
