@@ -21,5 +21,5 @@
 (require 'html)
 (require 'documentation)
 (require 'social)
-
+(require 'music)
 (require 'start)
