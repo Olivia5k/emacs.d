@@ -8,19 +8,6 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(require 'eww)
-
-(defun browse-subreddit (subreddit)
-  (eww-browse-url (concat "https://reddit.com/r/" subreddit)))
-
-(defun reddit-clj ()
-  (interactive)
-  (browse-subreddit "clojure"))
-
-(defun reddit-emacs ()
-  (interactive)
-  (browse-subreddit "emacs"))
-
 (require 'ag)
 (setq ag-reuse-buffers 't)
 

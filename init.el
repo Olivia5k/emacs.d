@@ -8,6 +8,7 @@
 (require 'editor)
 (require 'shell)
 (require 'mail)
+(require 'www)
 (require 'enhancements)
 (require 'customizations)
 (require 'hooks)
