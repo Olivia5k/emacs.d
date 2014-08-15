@@ -1,7 +1,11 @@
 ; IRC
 (require 'erc)
 (require 'erc-hl-nicks)
+(erc-hl-nicks-enable)
 (require 'erc-image)
+(erc-image-enable)
+(require 'erc-colorize)
+(erc-colorize-enable)
 
 (add-to-list 'erc-modules 'notifications)
 
