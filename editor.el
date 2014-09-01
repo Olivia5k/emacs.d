@@ -38,8 +38,7 @@
 ;; Whitespace
 (set-default 'indent-tabs-mode nil)
 (setq whitespace-style '(face trailing tabs))
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook 'whitespace-mode)
-
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (provide 'editor)
