@@ -57,7 +57,7 @@ May be necessary for some GUI environments (e.g., Mac OS X)")
       (setq remote-file-name-inhibit-cache t))
 
     ;; Uncomment next line if you like the menu right away
-    ;; (setq ac-show-menu-immediately-on-auto-complete t)
+    (setq ac-show-menu-immediately-on-auto-complete t)
 
     ;; Can also express in terms of ac-delay var, e.g.:
     ;; (setq ac-auto-show-menu (* ac-delay 2))
@@ -176,6 +176,8 @@ having the init-file file (e.g., '__init__.py'."
     (setq jedi:get-in-function-call-delay 10000000)
     ;; Start completion at method dot
     (setq jedi:complete-on-dot t)
+    ;; Indentation
+    (setq python-indent-offset 4)
     ;; Use custom keybinds
     (add-hook 'python-mode-hook 'jedi-config:setup-keys)
 
