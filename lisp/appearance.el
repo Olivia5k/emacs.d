@@ -8,7 +8,7 @@
 (fringe-mode '(4 . 0))
 
 ;; Theme
-(load-theme 'leuven t)
+(load-theme 'hemisu-dark t)
 
 ;; Cursor
 (blink-cursor-mode -1)
