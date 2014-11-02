@@ -13,7 +13,7 @@
 
 (setq erc-autojoin-channels-alist
       '(("irc.kaleidos.net" "#kaleidos" "#gr14" "#emacsens")
-        ("irc.freenode.net" "#emacs" "#emacs-es")))
+        ("irc.freenode.net" "#clojure" "#clojurescript" "#lisp" "#emacs-es")))
 
 
 (provide 'social)
