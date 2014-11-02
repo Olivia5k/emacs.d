@@ -34,6 +34,9 @@
 
 ;; Nyan progress bar
 (require 'nyan-mode)
+(setq nyan-animate-nyancat t
+      nyan-bar-length 10
+      nyan-wavy-trail t)
 (nyan-mode)
 
 ;; Pretty mode
