@@ -12,7 +12,7 @@
 (setq erc-interpret-mirc-color t)
 
 (setq erc-autojoin-channels-alist
-      '(("irc.kaleidos.net" "#kaleidos" "#gr14" "#emacsens")
+      '(("irc.kaleidos.net" "#gr14")
         ("irc.freenode.net" "#clojure" "#clojurescript" "#lisp" "#emacs-es")))
 
 
