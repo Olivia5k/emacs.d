@@ -3,6 +3,10 @@
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose t)
 
+; Disable misbehaving packages
+(electric-indent-mode -1)
+(electric-pair-mode -1)
+
 ; Override regions when writing text
 (delete-selection-mode)
 
