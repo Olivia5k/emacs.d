@@ -17,7 +17,6 @@
 ; Ido
 (require 'ido)
 (ido-mode)
-(ido-everywhere)
 
 (require 'ido-ubiquitous)
 (ido-ubiquitous-mode)
