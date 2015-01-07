@@ -1,5 +1,7 @@
 (add-hook 'dired-load-hook
           (lambda ()
-            (load "dired-x")))
+            (require 'dired-x)))
+(setq dired-omit-mode t)
+
 
 (provide 'filesystem)

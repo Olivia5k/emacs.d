@@ -8,6 +8,7 @@
 
 (dolist (mode-hook mode-hooks)
   (add-hook mode-hook (lambda ()
+                        (paredit-mode)
 			(rainbow-delimiters-mode)
                         (electric-pair-mode t)
 			(show-paren-mode)

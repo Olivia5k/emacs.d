@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+(require 'filesystem)
 (require 'packages)
 (require 'appearance)
 (require 'autocompletion)
@@ -9,7 +10,6 @@
 (require 'www)
 (require 'enhancements)
 (require 'customizations)
-(require 'hooks)
 (require 'custom-org)
 (require 'lisps)
 (require 'clojure)
@@ -22,4 +22,3 @@
 (require 'social)
 (require 'music)
 (require 'start)
-(require 'filesystem)
