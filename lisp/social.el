@@ -1,4 +1,4 @@
-; IRC
+;; IRC
 (require 'erc)
 (require 'erc-hl-nicks)
 (erc-hl-nicks-enable)
@@ -14,6 +14,11 @@
 (setq erc-autojoin-channels-alist
       '(("irc.kaleidos.net" "#gr14")
         ("irc.freenode.net" "#clojure" "#clojurescript" "#lisp" "#emacs-es")))
+
+;; Twitter
+(require 'twittering-mode)
+(setq twittering-icon-mode t
+      twittering-use-icon-storage t)
 
 
 (provide 'social)
