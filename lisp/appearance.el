@@ -20,7 +20,11 @@
 (setq echo-keystrokes 0.2)
 
 ;; Font
-(set-face-attribute 'default nil :height 110 :font "Fantasque Sans Mono")
+(cond
+ ((equal system-name "rocinante")
+  (set-face-attribute 'default nil :height 140 :font "Fantasque Sans Mono"))
+ (:else
+  (set-face-attribute 'default nil :height 110 :font "Fantasque Sans Mono")))
 
 ;; Fallback font for Unicode glyphs
 (set-fontset-font t nil

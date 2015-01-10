@@ -17,7 +17,6 @@
 
 ;; Customizations
 (setq org-enforce-todo-dependencies t
-      org-src-fontify-natively t
       org-confirm-babel-evaluate nil
       org-return-follows-link t)
 
@@ -30,6 +29,8 @@
 
 ;; HTML Export
 (setq org-html-html5-fancy t)
+(setq org-export-with-toc nil)
+(setq org-export-with-section-numbers nil)
 (setq org-html-doctype "html5")
 (setq org-html-use-infojs nil)
 (setq org-html-allow-name-attribute-in-anchors nil)
@@ -52,6 +53,5 @@
 (defun pomodoro ()
   (interactive)
   (org-timer-set-timer pomodoro-duration))
-
 
 (provide 'custom-org)

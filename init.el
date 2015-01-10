@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'exec-path "~/bin")
 
 (require 'filesystem)
 (require 'packages)
