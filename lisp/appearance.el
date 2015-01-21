@@ -76,4 +76,7 @@
 
 (add-hook 'after-change-major-mode-hook 'clean-mode-line)
 
+;; Fullscreen
+(set-frame-parameter nil 'fullscreen 'fullboth)
+
 (provide 'appearance)
