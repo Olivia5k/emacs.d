@@ -9,6 +9,14 @@
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
+;; Tern
+(add-hook 'js2-mode-hook (lambda () (tern-mode)))
+(eval-after-load 'tern
+                 '(progn
+                    (require 'tern-auto-complete)
+                    (tern-ac-setup)))
+
+
 (require 'coffee-mode)
 (setq coffee-tab-width 4)
 
