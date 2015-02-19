@@ -54,4 +54,7 @@
   (interactive)
   (org-timer-set-timer pomodoro-duration))
 
+;; Inline images
+(org-display-inline-images)
+
 (provide 'custom-org)
